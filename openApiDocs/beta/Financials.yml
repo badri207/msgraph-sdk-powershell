@@ -32179,8 +32179,6 @@ components:
               type: string
               format: date
               nullable: true
-            item:
-              $ref: '#/components/schemas/microsoft.graph.item'
             account:
               $ref: '#/components/schemas/microsoft.graph.account'
           additionalProperties:
@@ -32460,8 +32458,6 @@ components:
               type: string
               format: date
               nullable: true
-            item:
-              $ref: '#/components/schemas/microsoft.graph.item'
             account:
               $ref: '#/components/schemas/microsoft.graph.account'
           additionalProperties:
@@ -32683,8 +32679,6 @@ components:
               type: string
               format: date
               nullable: true
-            item:
-              $ref: '#/components/schemas/microsoft.graph.item'
             account:
               $ref: '#/components/schemas/microsoft.graph.account'
           additionalProperties:
@@ -32940,8 +32934,6 @@ components:
               type: number
               format: decimal
               nullable: true
-            item:
-              $ref: '#/components/schemas/microsoft.graph.item'
             account:
               $ref: '#/components/schemas/microsoft.graph.account'
           additionalProperties:
@@ -33160,8 +33152,6 @@ components:
               type: number
               format: decimal
               nullable: true
-            item:
-              $ref: '#/components/schemas/microsoft.graph.item'
             account:
               $ref: '#/components/schemas/microsoft.graph.account'
           additionalProperties:
