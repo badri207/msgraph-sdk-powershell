@@ -387,6 +387,11 @@ directive:
         if($.match(valuesPropertiesRegex)) {
           $ = $.replace(valuesPropertiesRegex, '$1$2 new $3');
         }
+        // Add new modifier to 'additionalProperties' properties of classes that derive from an IAssociativeArray. See example https://regex101.com/r/hnX7xO/2.
+        let additionalPropertiesRegex = /(SerializedName\s*=\s*@"additionalProperties".*\s*.*)(\s*)(.*AdditionalProperties\s*{\s*get;\s*set;\s*})/gmi
+        if($.match(additionalPropertiesRegex)) {
+          $ = $.replace(additionalPropertiesRegex, '$1$2 new $3');
+        }
 
         let regexPattern = /^\s*public\s*partial\s*class\s*MicrosoftGraph(?<EntityName>.*):$/gm;
         let regexArray;
