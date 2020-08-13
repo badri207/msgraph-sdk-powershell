@@ -41,10 +41,9 @@ subject-prefix: ''
 directive:
   - remove-path-by-operation: teams_GetGroup|team_ListTeam
 ```
-
 ### Versioning
 
 ``` yaml
-module-version: 0.9.0
+module-version: 0.9.1
 release-notes: See https://aka.ms/GraphPowerShell-Release.
 ```

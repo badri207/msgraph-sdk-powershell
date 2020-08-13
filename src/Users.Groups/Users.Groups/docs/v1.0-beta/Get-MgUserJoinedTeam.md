@@ -12,11 +12,11 @@ Get joinedTeams from users
 
 ## SYNTAX
 
-### List (Default)
+### List1 (Default)
 ```
 Get-MgUserJoinedTeam -UserId <String> [-Count] [-ExpandProperty <String[]>] [-Filter <String>]
- [-PageSize <Int32>] [-Property <String[]>] [-Search <String>] [-Skip <Int32>] [-Sort <String[]>] [-All]
- [<CommonParameters>]
+ [-Property <String[]>] [-Search <String>] [-Skip <Int32>] [-Sort <String[]>] [-Top <Int32>] [-All]
+ [-PageSize <Int32>] [<CommonParameters>]
 ```
 
 ### Get1
@@ -57,11 +57,11 @@ PS C:\> {{ Add code here }}
 ## PARAMETERS
 
 ### -All
-List all pages
+List all pages.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: List
+Parameter Sets: List1
 Aliases:
 
 Required: False
@@ -76,7 +76,7 @@ Include count of items
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: List
+Parameter Sets: List1
 Aliases:
 
 Required: False
@@ -106,7 +106,7 @@ Filter items by property values
 
 ```yaml
 Type: System.String
-Parameter Sets: List
+Parameter Sets: List1
 Aliases:
 
 Required: False
@@ -133,12 +133,12 @@ Accept wildcard characters: False
 ```
 
 ### -PageSize
-Show only the first n items
+Sets the page size of results.
 
 ```yaml
 Type: System.Int32
-Parameter Sets: List
-Aliases: Top, Limit
+Parameter Sets: List1
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ Search items by search phrases
 
 ```yaml
 Type: System.String
-Parameter Sets: List
+Parameter Sets: List1
 Aliases:
 
 Required: False
@@ -182,7 +182,7 @@ Skip the first n items
 
 ```yaml
 Type: System.Int32
-Parameter Sets: List
+Parameter Sets: List1
 Aliases:
 
 Required: False
@@ -197,7 +197,7 @@ Order items by property values
 
 ```yaml
 Type: System.String[]
-Parameter Sets: List
+Parameter Sets: List1
 Aliases: OrderBy
 
 Required: False
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamId
-key: team-id of team
+key: id of team
 
 ```yaml
 Type: System.String
@@ -222,12 +222,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Top
+Show only the first n items
+
+```yaml
+Type: System.Int32
+Parameter Sets: List1
+Aliases: Limit
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UserId
-key: user-id of user
+key: id of user
 
 ```yaml
 Type: System.String
-Parameter Sets: Get1, List
+Parameter Sets: Get1, List1
 Aliases:
 
 Required: True
@@ -258,9 +273,9 @@ To create the parameters described below, construct a hash table containing the 
 
 
 INPUTOBJECT <IUsersGroupsIdentity>: Identity Parameter
-  - `[GroupId <String>]`: key: group-id of group
-  - `[TeamId <String>]`: key: team-id of team
-  - `[UserId <String>]`: key: user-id of user
+  - `[GroupId <String>]`: key: id of group
+  - `[TeamId <String>]`: key: id of team
+  - `[UserId <String>]`: key: id of user
 
 ## RELATED LINKS
 

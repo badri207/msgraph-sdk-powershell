@@ -60,10 +60,9 @@ directive:
     set:
       subject: $1$2
 ```
-
 ### Versioning
 
 ``` yaml
-module-version: 0.9.0
+module-version: 0.9.1
 release-notes: See https://aka.ms/GraphPowerShell-Release.
 ```
