@@ -95,19 +95,19 @@
     // "Users.Extensions": "^users.extension$",
     // "Users.FollowedSites": "^users.site$",
     // Batch 9
-    "Users.Functions": "^users.Functions$",
-    "Users.Groups": "^users.group$|^users.team$",
-    "Users.InformationProtection": "^users.informationProtection$", // Missing in docs
-    "Users.LicenseDetails": "^users.licenseDetails$",
-    "Users.Mail": "^users.inferenceClassification$|^users.mailFolder$|^users.message$",
+    // "Users.Functions": "^users.Functions$",
+    // "Users.Groups": "^users.group$|^users.team$",
+    // "Users.InformationProtection": "^users.informationProtection$", // Missing in docs
+    // "Users.LicenseDetails": "^users.licenseDetails$",
+    // "Users.Mail": "^users.inferenceClassification$|^users.mailFolder$|^users.message$",
     // Batch 10
-    // "Users.OneNote": "^users.onenote$",
-    // "Users.OutlookUser": "^users.outlookUser$",
-    // "Users.People": "^users.person$",
-    // "Users.Planner": "^users.plannerUser$",
-    // "Users.ProfilePhoto": "^users.profilePhoto$",
-    // "Users.User": "^users.user$|^users.presence$",
-    // "Users.UserSettings": "^users.userSettings$"
+    "Users.OneNote": "^users.onenote$",
+    "Users.OutlookUser": "^users.outlookUser$",
+    "Users.People": "^users.person$",
+    "Users.Planner": "^users.plannerUser$",
+    "Users.ProfilePhoto": "^users.profilePhoto$",
+    "Users.User": "^users.user$|^users.presence$",
+    "Users.UserSettings": "^users.userSettings$"
 
     // Fails to build.
     // "CloudCommunications": "^communications\\.", \\ OData.OpenAPI should handle multiple namespace.
