@@ -70,14 +70,14 @@
     // "Search": "^search\\.|^external\\.",
     // "Security": "^Security\\.",
     // Batch 5
-    "Sites.Actions": "^sites.Actions$",
-    "Sites.Drive": "^sites.drive$",
-    "Sites.Functions": "^sites.Functions$",
+    // "Sites.Actions": "^sites.Actions$",
+    // "Sites.Drive": "^sites.drive$",
+    // "Sites.Functions": "^sites.Functions$",
     // Batch 6
-    // "Sites.List": "^sites.list$",
-    // "Sites.OneNote": "^sites.onenote$",
-    // "Sites.Pages": "^sites.sitePage$",
-    // "Sites.Site": "^sites.site$|^sites.itemAnalytics$|^sites.columnDefinition$|^sites.contentType$",
+    "Sites.List": "^sites.list$",
+    "Sites.OneNote": "^sites.onenote$",
+    "Sites.Pages": "^sites.sitePage$",
+    "Sites.Site": "^sites.site$|^sites.itemAnalytics$|^sites.columnDefinition$|^sites.contentType$",
     // Batch 7
     // "Subscriptions": "^subscriptions\\.",
     // "Teams.AppCatalogs": "^appCatalogs\\.",
