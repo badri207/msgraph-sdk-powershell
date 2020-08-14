@@ -78,17 +78,17 @@
     //G "Teams.Team": "^teams\\.|^teamwork\\.|^groups.team$",
     //G "Teams.Teamwork": "^users.userTeamwork$",
     // Batch 3
-    // "Users.Actions": "^users.Actions$",
-    // "Users.ActivityFeed": "^users.userActivity$",
-    // "Users.Calendar": "^users.calendar$|^users.calendarGroup$|^users.event$",
-    // "Users.Contacts": "^users.contact$|^users.contactFolder$",
-    // "Users.Devices": "^users.device$",
-    // "Users.DirectoryObject": "^users.directoryObject$",
+    "Users.Actions": "^users.Actions$",
+    "Users.ActivityFeed": "^users.userActivity$",
+    "Users.Calendar": "^users.calendar$|^users.calendarGroup$|^users.event$",
+    "Users.Contacts": "^users.contact$|^users.contactFolder$",
+    "Users.Devices": "^users.device$",
+    "Users.DirectoryObject": "^users.directoryObject$",
     // Batch 2
-    "Users.Drive": "^users.drive$",
-    "Users.Extensions": "^users.extension$",
-    "Users.FollowedSites": "^users.site$",
-    "Users.Functions": "^users.Functions$",
+    // "Users.Drive": "^users.drive$",
+    // "Users.Extensions": "^users.extension$",
+    // "Users.FollowedSites": "^users.site$",
+    // "Users.Functions": "^users.Functions$",
     //G "Users.Groups": "^users.group$|^users.team$",
     // Batch 1
     // "Users.InformationProtection": "^users.informationProtection$", // Missing in docs
