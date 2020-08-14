@@ -6,11 +6,12 @@
     // "DevicesApps.OfficeConfiguration": "^officeConfiguration\\.",
     // "DevicesApps.SharedResources": "^users.mobileAppTroubleshootingEvent$",
     // "Education": "^education\\.",
-    // "Files.Drives": "^drives\\.|^drive\\.",
-    // "Files.Permissions": "^groups.resourceSpecificPermissionGrant$", // Missing in docs
+    // Batch 15
+    "Files.Drives": "^drives\\.|^drive\\.",
+    "Files.Permissions": "^groups.resourceSpecificPermissionGrant$", // Missing in docs
     // Batch 14
-    "Files.Shares": "^shares\\.",
-    "Financials": "^financials\\.",
+    // "Files.Shares": "^shares\\.",
+    // "Financials": "^financials\\.",
     // Batch 13
     // "Groups.Actions": "^groups.Actions$",
     // "Groups.Calendar": "^groups.calendar$|^groups.event$",
