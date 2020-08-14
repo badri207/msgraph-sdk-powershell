@@ -8,11 +8,12 @@
     // "Education": "^education\\.",
     // "Files.Drives": "^drives\\.|^drive\\.",
     // "Files.Permissions": "^groups.resourceSpecificPermissionGrant$", // Missing in docs
-    // "Files.Shares": "^shares\\.",
-    // "Financials": "^financials\\.",
+    // Batch 14
+    "Files.Shares": "^shares\\.",
+    "Financials": "^financials\\.",
     // Batch 13
-    "Groups.Actions": "^groups.Actions$",
-    "Groups.Calendar": "^groups.calendar$|^groups.event$",
+    // "Groups.Actions": "^groups.Actions$",
+    // "Groups.Calendar": "^groups.calendar$|^groups.event$",
     // Batch 12
     // "Groups.Conversation": "^groups.conversation$",
     // "Groups.ConversationThread": "^groups.conversationThread$",
