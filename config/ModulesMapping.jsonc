@@ -10,13 +10,14 @@
     // "Files.Permissions": "^groups.resourceSpecificPermissionGrant$", // Missing in docs
     // "Files.Shares": "^shares\\.",
     // "Financials": "^financials\\.",
-    // "Groups.Actions": "^groups.Actions$",
-    // "Groups.Calendar": "^groups.calendar$|^groups.event$",
+    // Batch 13
+    "Groups.Actions": "^groups.Actions$",
+    "Groups.Calendar": "^groups.calendar$|^groups.event$",
     // Batch 12
-    "Groups.Conversation": "^groups.conversation$",
-    "Groups.ConversationThread": "^groups.conversationThread$",
-    "Groups.DirectoryObject": "^groups.directoryObject$",
-    "Groups.Drive": "^groups.drive$",
+    // "Groups.Conversation": "^groups.conversation$",
+    // "Groups.ConversationThread": "^groups.conversationThread$",
+    // "Groups.DirectoryObject": "^groups.directoryObject$",
+    // "Groups.Drive": "^groups.drive$",
     // Batch 11
     // "Groups.Endpoint": "^groups.endpoint$",
     // "Groups.Extension": "^groups.extension$",
