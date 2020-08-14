@@ -2,13 +2,14 @@
     // "Analytics": "^users.userAnalytics$|^users.officeGraphInsights$",
     // "Bookings": "^bookingBusinesses\\.|^bookingCurrencies\\.",
     // "DevicesApps.DeviceAppManagement": "^deviceAppManagement\\.",
-    // "DevicesApps.MobileAppManagement": "^users.managedAppRegistration$|^users.windowsInformationProtectionDeviceRegistration$",
-    // "DevicesApps.OfficeConfiguration": "^officeConfiguration\\.",
-    // "DevicesApps.SharedResources": "^users.mobileAppTroubleshootingEvent$",
-    // "Education": "^education\\.",
+    // Batch 16
+    "DevicesApps.MobileAppManagement": "^users.managedAppRegistration$|^users.windowsInformationProtectionDeviceRegistration$",
+    "DevicesApps.OfficeConfiguration": "^officeConfiguration\\.",
+    "DevicesApps.SharedResources": "^users.mobileAppTroubleshootingEvent$",
+    "Education": "^education\\.",
     // Batch 15
-    "Files.Drives": "^drives\\.|^drive\\.",
-    "Files.Permissions": "^groups.resourceSpecificPermissionGrant$", // Missing in docs
+    // "Files.Drives": "^drives\\.|^drive\\.",
+    // "Files.Permissions": "^groups.resourceSpecificPermissionGrant$", // Missing in docs
     // Batch 14
     // "Files.Shares": "^shares\\.",
     // "Financials": "^financials\\.",
