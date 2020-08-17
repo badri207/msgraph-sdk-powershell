@@ -52,7 +52,6 @@ stages:
     steps:
     - template: ./credential-scanning.yml
 
-stages:
 - stage: DownloadOpenApiDocs
   displayName: 'Download Open Api Docs from DevX API'
   jobs:
@@ -64,7 +63,6 @@ stages:
         GitUserName: $(GitUserName)
         BaseBranch: $(BaseBranch)
 
-stages:
 - stage: GenerateProfiles
   displayName: 'Generate Profiles'
   jobs:
