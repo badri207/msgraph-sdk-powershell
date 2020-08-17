@@ -2,7 +2,8 @@
     "Users.User": "^users.user$|^users.presence$"
 
     // Fails to build.
-    //"DevicesApps.DeviceManagement": "^deviceManagement\\.|^users.deviceEnrollmentConfiguration$|^users.deviceManagementTroubleshootingEvent$|^users.managedDevice$|^users.mobileAppIntentAndState$",
+    // "CloudCommunications": "^communications\\.", \\ OData.OpenAPI should handle multiple namespace.
+    // "DevicesApps.DeviceManagement": "^deviceManagement\\.|^users.deviceEnrollmentConfiguration$|^users.deviceManagementTroubleshootingEvent$|^users.managedDevice$|^users.mobileAppIntentAndState$",
     // "Workbooks": "^workbooks\\.", - Too large
 
     // Invalid / No longer supported
