@@ -16,16 +16,6 @@ parameters:
     default: 'dev'
 
 steps:
-  - checkout: self
-    persistCredentials: true
-    clean: true
-    fetchDepth: 1
-
-  - task: securedevelopmentteam.vss-secure-development-tools.build-task-credscan.CredScan@2
-    displayName: 'Run CredScan'
-    inputs:
-      debugMode: false
-
   - task: PowerShell@2
     displayName: "Compute Branch"
     inputs:
