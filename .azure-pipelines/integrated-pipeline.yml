@@ -42,8 +42,13 @@ trigger:
       - master
     paths:
       include:
-      - src/Authentication/*
-
+        - src/*
+        - config/ModulesMapping.jsonc
+      exclude:
+        - src/Authentication/*
+resources:
+  - repo: self
+  
 stages:
 - stage: CredentialScanning
   displayName: 'Scan for Credentials in CodeBase'
