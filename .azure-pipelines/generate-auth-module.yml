@@ -1,7 +1,6 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 
-# Generates a release build artifact (nuget) from HEAD of master for auth module.
 parameters:
   - name: AUTH_MODULE_PATH
     displayName: 'Authentication Module Path'

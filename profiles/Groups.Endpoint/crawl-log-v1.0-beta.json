@@ -1,13 +1,13 @@
 {
-  "resources": [],
   "operations": {
-    "/groups/{group-id}/endpoints/{endpoint-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Groups.Endpoint.yml"
-    },
     "/groups/{group-id}/endpoints": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Groups.Endpoint.yml"
+      "originalLocation": "/openApiDocs/beta/Groups.Endpoint.yml",
+      "apiVersion": "v1.0-beta"
+    },
+    "/groups/{group-id}/endpoints/{endpoint-id}": {
+      "originalLocation": "/openApiDocs/beta/Groups.Endpoint.yml",
+      "apiVersion": "v1.0-beta"
     }
-  }
+  },
+  "resources": []
 }

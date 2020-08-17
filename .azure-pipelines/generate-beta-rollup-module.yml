@@ -1,7 +1,6 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 
-# Generates a release build artifact (nuget) for beta roll-up module.
 parameters:
   - name: ROLLUP_MODULE_PATH
     displayName: 'Module Path'
@@ -97,17 +96,6 @@ jobs:
            }
        ]
       SessionTimeout: 20
-  
-  - task: PowerShell@2
-    displayName : 'List Files'
-    inputs: 
-        targetType: 'inline'
-        script: |
-         ls -R '$(Build.ArtifactStagingDirectory)/$(GRAPH_VERSION)/'
-         ls -R '$(System.DefaultWorkingDirectory)/artifacts/graph/'
-         echo $(GRAPH_VERSION)
-         echo $(BETA_MODULE_PREFIX)
-         echo $(ROLLUP_MODULE_PATH)
 
   - task: NuGetCommand@2
     displayName: 'Pack Roll-Up Module'

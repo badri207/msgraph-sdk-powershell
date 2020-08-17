@@ -1,17 +1,17 @@
 {
-  "resources": [],
   "operations": {
-    "/groups/{group-id}/photo": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Groups.ProfilePhoto.yml"
-    },
     "/groups/{group-id}/photos/{profilePhoto-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Groups.ProfilePhoto.yml"
+      "originalLocation": "/openApiDocs/beta/Groups.ProfilePhoto.yml",
+      "apiVersion": "v1.0-beta"
     },
     "/groups/{group-id}/photos": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Groups.ProfilePhoto.yml"
+      "originalLocation": "/openApiDocs/beta/Groups.ProfilePhoto.yml",
+      "apiVersion": "v1.0-beta"
+    },
+    "/groups/{group-id}/photo": {
+      "originalLocation": "/openApiDocs/beta/Groups.ProfilePhoto.yml",
+      "apiVersion": "v1.0-beta"
     }
-  }
+  },
+  "resources": []
 }

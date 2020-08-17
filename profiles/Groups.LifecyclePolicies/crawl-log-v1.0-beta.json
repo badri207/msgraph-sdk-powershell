@@ -1,25 +1,25 @@
 {
-  "resources": [],
   "operations": {
     "/groupLifecyclePolicies/{groupLifecyclePolicy-id}/microsoft.graph.removeGroup": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Groups.LifecyclePolicies.yml"
+      "originalLocation": "/openApiDocs/beta/Groups.LifecyclePolicies.yml",
+      "apiVersion": "v1.0-beta"
     },
     "/groupLifecyclePolicies": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Groups.LifecyclePolicies.yml"
-    },
-    "/groupLifecyclePolicies/{groupLifecyclePolicy-id}/microsoft.graph.addGroup": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Groups.LifecyclePolicies.yml"
+      "originalLocation": "/openApiDocs/beta/Groups.LifecyclePolicies.yml",
+      "apiVersion": "v1.0-beta"
     },
     "/groupLifecyclePolicies/{groupLifecyclePolicy-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Groups.LifecyclePolicies.yml"
+      "originalLocation": "/openApiDocs/beta/Groups.LifecyclePolicies.yml",
+      "apiVersion": "v1.0-beta"
     },
     "/groupLifecyclePolicies/microsoft.graph.renewGroup": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Groups.LifecyclePolicies.yml"
+      "originalLocation": "/openApiDocs/beta/Groups.LifecyclePolicies.yml",
+      "apiVersion": "v1.0-beta"
+    },
+    "/groupLifecyclePolicies/{groupLifecyclePolicy-id}/microsoft.graph.addGroup": {
+      "originalLocation": "/openApiDocs/beta/Groups.LifecyclePolicies.yml",
+      "apiVersion": "v1.0-beta"
     }
-  }
+  },
+  "resources": []
 }

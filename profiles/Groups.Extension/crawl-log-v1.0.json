@@ -1,13 +1,13 @@
 {
-  "resources": [],
   "operations": {
     "/groups/{group-id}/extensions": {
-      "apiVersion": "v1.0",
-      "originalLocation": "/openApiDocs/v1.0/Groups.Extension.yml"
+      "originalLocation": "/openApiDocs/v1.0/Groups.Extension.yml",
+      "apiVersion": "v1.0"
     },
     "/groups/{group-id}/extensions/{extension-id}": {
-      "apiVersion": "v1.0",
-      "originalLocation": "/openApiDocs/v1.0/Groups.Extension.yml"
+      "originalLocation": "/openApiDocs/v1.0/Groups.Extension.yml",
+      "apiVersion": "v1.0"
     }
-  }
+  },
+  "resources": []
 }

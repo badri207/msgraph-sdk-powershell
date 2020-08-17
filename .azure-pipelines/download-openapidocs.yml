@@ -1,5 +1,6 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
+
 parameters:
   - name: GitUserEmail
     displayName: 'Git User Email'
@@ -13,7 +14,7 @@ parameters:
     displayName: 'Base Branch'
     type: string
     default: 'dev'
-    
+
 steps:
   - checkout: self
     persistCredentials: true

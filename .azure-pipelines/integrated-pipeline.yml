@@ -45,6 +45,14 @@ trigger:
       - src/Authentication/*
 
 stages:
+- stage: CredentialScanning
+  displayName: 'Scan for Credentials in CodeBase'
+  jobs:
+  - job: CredentialScanning
+    steps:
+    - template: ./credential-scanning.yml
+
+stages:
 - stage: DownloadOpenApiDocs
   displayName: 'Download Open Api Docs from DevX API'
   jobs:
@@ -55,6 +63,14 @@ stages:
         GitUserEmail: $(GitUserEmail)
         GitUserName: $(GitUserName)
         BaseBranch: $(BaseBranch)
+
+stages:
+- stage: GenerateProfiles
+  displayName: 'Generate Profiles'
+  jobs:
+  - job: GenerateProfiles
+    steps:
+    - template: ./generate-profiles.yml
 
 - stage: GenerateAuthModule
   displayName: 'Generate Authentication Module (Microsoft.Graph.Authentication)'
