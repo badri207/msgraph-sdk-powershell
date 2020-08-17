@@ -5,7 +5,7 @@ parameters:
   - name: ROLLUP_MODULE_PATH
     displayName: 'Module Path'
     type: string
-    default: 'src/Beta/Graph/Graph'
+    default: 'src/Graph/Graph'
   - name: ROLLUP_MODULE_NAME
     displayName: 'Module Name'
     type: string
@@ -46,7 +46,6 @@ jobs:
     displayName: 'Generate and Build Roll-Up Module'
     inputs:
       filePath: '$(System.DefaultWorkingDirectory)/tools/GenerateRollUpModule.ps1'
-      arguments: '-RepositoryApiKey $(Api_Key) -ArtifactsLocation $(Build.ArtifactStagingDirectory)/$(GRAPH_VERSION)/'
       pwsh: true
   
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
@@ -55,7 +54,7 @@ jobs:
     inputs:
       ConnectedServiceName: 'microsoftgraph ESRP CodeSign DLL and NuGet'
       FolderPath: $(ROLLUP_MODULE_PATH)
-      Pattern: '$(MODULE_PREFIX).psm1, $(MODULE_PREFIX).*.format.ps1xml, *.ps1'
+      Pattern: '$(BETA_MODULE_PREFIX).psm1, $(BETA_MODULE_PREFIX).*.format.ps1xml, *.ps1'
       signConfigType: inlineSignParams
       inlineOperation: |
        [
@@ -102,8 +101,8 @@ jobs:
     inputs:
       command: 'pack'
       Configuration: Release
-      packagesToPack: '$(System.DefaultWorkingDirectory)/artifacts/graph/$(BETA_MODULE_PREFIX)*.nuspec'
-      packDestination: '$(Build.ArtifactStagingDirectory)/$(GRAPH_VERSION)/'
+      packagesToPack: '$(System.DefaultWorkingDirectory)/$(ROLLUP_MODULE_PATH)/$(BETA_MODULE_PREFIX).nuspec'
+      packDestination: '$(Build.ArtifactStagingDirectory)/'
       versioningScheme: 'off'
   
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
@@ -111,7 +110,7 @@ jobs:
     enabled: false
     inputs:
       ConnectedServiceName: 'microsoftgraph ESRP CodeSign DLL and NuGet'
-      FolderPath: '$(Build.ArtifactStagingDirectory)/$(GRAPH_VERSION)/'
+      FolderPath: '$(Build.ArtifactStagingDirectory)/'
       Pattern: 'Microsoft.Graph*.nupkg'
       signConfigType: inlineSignParams
       inlineOperation: |
@@ -136,7 +135,7 @@ jobs:
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Artifact Microsoft.Graph.nupkg'
     inputs:
-      PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(GRAPH_VERSION)'
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)/'
       ArtifactName: 'drop'
       publishLocation: 'Container'
 

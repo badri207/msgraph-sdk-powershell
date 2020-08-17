@@ -33,7 +33,7 @@ parameters:
 jobs:
 - job: MSGraphPSSDKGeneration
   displayName: MS Graph PS SDK Beta Generation
-  timeoutInMinutes: 600
+  timeoutInMinutes: 800
   pool:
     name: Microsoft Graph
     demands: 'Agent.Name -equals PS-Build-Agent'
@@ -64,7 +64,7 @@ jobs:
     displayName: 'Build Auth Modules'
     inputs:
       filePath: '$(System.DefaultWorkingDirectory)/tools/GenerateAuthenticationModule.ps1'
-      arguments: '-RepositoryApiKey $(Api_Key) -ArtifactsLocation $(Build.ArtifactStagingDirectory) -Build -BuildWhenEqual -EnableSigning:$$(EnableSigning)'
+      arguments: '-ArtifactsLocation $(Build.ArtifactStagingDirectory) -Build -BuildWhenEqual -EnableSigning'
       pwsh: true
   
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
@@ -146,7 +146,7 @@ jobs:
     displayName: 'Generate and Build Graph Resource Modules'
     inputs:
       filePath: '$(System.DefaultWorkingDirectory)/tools/GenerateModules.ps1'
-      arguments: '-RepositoryApiKey $(Api_Key) -ArtifactsLocation $(Build.ArtifactStagingDirectory)\$(GRAPH_VERSION)\ -Build -EnableSigning:$$(EnableSigning)'
+      arguments: '-ArtifactsLocation $(Build.ArtifactStagingDirectory)\ -Build -EnableSigning'
       pwsh: true
   
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
@@ -155,7 +155,7 @@ jobs:
     inputs:
       ConnectedServiceName: 'microsoftgraph ESRP CodeSign DLL and NuGet'
       FolderPath: $(WORKLOAD_MODULE_PATH)
-      Pattern: '$(BETA_MODULE_PREFIX).*.private.dll'
+      Pattern: '$(MODULE_PREFIX).*.private.dll'
       signConfigType: inlineSignParams
       inlineOperation: |
        [
@@ -182,7 +182,7 @@ jobs:
     inputs:
       ConnectedServiceName: 'microsoftgraph ESRP CodeSign DLL and NuGet'
       FolderPath: $(WORKLOAD_MODULE_PATH)
-      Pattern: '$(BETA_MODULE_PREFIX).*.private.dll, $(BETA_MODULE_PREFIX).*.psm1, $(BETA_MODULE_PREFIX).*.format.ps1xml, *.ps1'
+      Pattern: '$(MODULE_PREFIX).*.private.dll, $(MODULE_PREFIX).*.psm1, $(MODULE_PREFIX).*.format.ps1xml, ProxyCmdletDefinitions.ps1, load-dependency.ps1'
       signConfigType: inlineSignParams
       inlineOperation: |
        [
@@ -233,8 +233,8 @@ jobs:
         [HashTable] $ModuleMapping = Get-Content $ModuleMappingConfigPath | ConvertFrom-Json -AsHashTable
         $ModuleMapping.Keys | ForEach-Object {
             $ModuleName = $_
-            $ModuleProjectDir = '$(System.DefaultWorkingDirectory)/src/$ModuleName/$ModuleName'
-            & $(System.DefaultWorkingDirectory)/tools/PackModule.ps1 -Module $ModuleName -ArtifactsLocation '$(Build.ArtifactStagingDirectory)\$(GRAPH_VERSION)\'
+            $ModuleProjectDir = "$(System.DefaultWorkingDirectory)/src/$ModuleName/$ModuleName"
+            & $(System.DefaultWorkingDirectory)/tools/PackModule.ps1 -Module $ModuleName -ArtifactsLocation $(Build.ArtifactStagingDirectory)\
         }
       pwsh: true
   
@@ -243,7 +243,7 @@ jobs:
     enabled: false
     inputs:
       ConnectedServiceName: 'microsoftgraph ESRP CodeSign DLL and NuGet'
-      FolderPath: '$(Build.ArtifactStagingDirectory)\$(GRAPH_VERSION)\'
+      FolderPath: '$(Build.ArtifactStagingDirectory)\'
       Pattern: '*.nupkg'
       signConfigType: inlineSignParams
       inlineOperation: |
@@ -268,7 +268,7 @@ jobs:
   - task: PublishBuildArtifacts@1
     displayName: Publish Artifact Beta Modules
     inputs:
-      PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(GRAPH_VERSION)'
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)/'
       ArtifactName: 'drop'
       publishLocation: 'Container'
 
