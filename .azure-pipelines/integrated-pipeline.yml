@@ -24,7 +24,7 @@ variables:
 - name: ROLLUP_MODULE_NAME
   value: 'Graph'
 - name: ROLLUP_MODULE_PATH
-  value: 'src'
+  value: 'src/Graph/Graph'
 - name: WORKLOAD_MODULE_PATH
   value: 'src'
 - name: GRAPH_VERSION
@@ -48,7 +48,7 @@ trigger:
         - src/Authentication/*
 resources:
   - repo: self
-  
+
 stages:
 - stage: CredentialScanning
   displayName: 'Scan for Credentials in CodeBase'
