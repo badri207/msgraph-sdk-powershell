@@ -32,13 +32,7 @@ jobs:
   pool:
     vmImage: 'windows-latest'
   
-  steps:
-  - task: securedevelopmentteam.vss-secure-development-tools.build-task-credscan.CredScan@2
-    displayName: 'Run CredScan'
-    enabled: false
-    inputs:
-      debugMode: false
-  
+  steps:  
   - task: NuGetToolInstaller@1
     displayName: 'Install Nuget'
   
@@ -50,7 +44,7 @@ jobs:
   
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
     displayName: 'ESRP CodeSigning (Graph Roll-Up Module)'
-    enabled: false
+    enabled: true
     inputs:
       ConnectedServiceName: 'microsoftgraph ESRP CodeSign DLL and NuGet'
       FolderPath: $(ROLLUP_MODULE_PATH)
@@ -107,7 +101,7 @@ jobs:
   
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
     displayName: 'ESRP NuGet CodeSigning'
-    enabled: false
+    enabled: true
     inputs:
       ConnectedServiceName: 'microsoftgraph ESRP CodeSign DLL and NuGet'
       FolderPath: '$(Build.ArtifactStagingDirectory)/'
