@@ -10,7 +10,6 @@
     "Users.FollowedSites": "^users.site$",
     "Users.Functions": "^users.Functions$",
     "Users.Groups": "^users.group$|^users.team$",
-    "Users.InformationProtection": "^users.informationProtection$", // Missing in docs
     "Users.LicenseDetails": "^users.licenseDetails$",
     "Users.Mail": "^users.inferenceClassification$|^users.mailFolder$|^users.message$",
     "Users.OneNote": "^users.onenote$",
