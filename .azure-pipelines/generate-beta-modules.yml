@@ -149,7 +149,7 @@ jobs:
     inputs:
       ConnectedServiceName: 'microsoftgraph ESRP CodeSign DLL and NuGet'
       FolderPath: $(WORKLOAD_MODULE_PATH)
-      Pattern: '$(MODULE_PREFIX).*.private.dll'
+      Pattern: '$(BETA_MODULE_PREFIX).*.private.dll'
       signConfigType: inlineSignParams
       inlineOperation: |
        [
@@ -176,7 +176,7 @@ jobs:
     inputs:
       ConnectedServiceName: 'microsoftgraph ESRP CodeSign DLL and NuGet'
       FolderPath: $(WORKLOAD_MODULE_PATH)
-      Pattern: '$(MODULE_PREFIX).*.private.dll, $(MODULE_PREFIX).*.psm1, $(MODULE_PREFIX).*.format.ps1xml, ProxyCmdletDefinitions.ps1, load-dependency.ps1'
+      Pattern: '$(BETA_MODULE_PREFIX).*.private.dll, $(BETA_MODULE_PREFIX).*.psm1, $(BETA_MODULE_PREFIX).*.format.ps1xml, ProxyCmdletDefinitions.ps1, load-dependency.ps1'
       signConfigType: inlineSignParams
       inlineOperation: |
        [
