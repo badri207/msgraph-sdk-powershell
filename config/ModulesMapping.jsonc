@@ -1,5 +1,25 @@
 {
-    "Users.User": "^users.user$|^users.presence$"
+    "Users.Actions": "^users.Actions$",
+    "Users.ActivityFeed": "^users.userActivity$",
+    "Users.Calendar": "^users.calendar$|^users.calendarGroup$|^users.event$",
+    "Users.Contacts": "^users.contact$|^users.contactFolder$",
+    "Users.Devices": "^users.device$",
+    "Users.DirectoryObject": "^users.directoryObject$",
+    "Users.Drive": "^users.drive$",
+    "Users.Extensions": "^users.extension$",
+    "Users.FollowedSites": "^users.site$",
+    "Users.Functions": "^users.Functions$",
+    "Users.Groups": "^users.group$|^users.team$",
+    "Users.InformationProtection": "^users.informationProtection$", // Missing in docs
+    "Users.LicenseDetails": "^users.licenseDetails$",
+    "Users.Mail": "^users.inferenceClassification$|^users.mailFolder$|^users.message$",
+    "Users.OneNote": "^users.onenote$",
+    "Users.OutlookUser": "^users.outlookUser$",
+    "Users.People": "^users.person$",
+    "Users.Planner": "^users.plannerUser$",
+    "Users.ProfilePhoto": "^users.profilePhoto$",
+    "Users.User": "^users.user$|^users.presence$",
+    "Users.UserSettings": "^users.userSettings$"
 
     // Fails to build.
     // "CloudCommunications": "^communications\\.", \\ OData.OpenAPI should handle multiple namespace.
