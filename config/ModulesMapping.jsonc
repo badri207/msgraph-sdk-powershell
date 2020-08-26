@@ -99,12 +99,12 @@
     "Users.User": "^users.user$|^users.presence$",
     "Users.UserSettings": "^users.userSettings$"
 
-    // Fails to build.
-    // "CloudCommunications": "^communications\\.", \\ OData.OpenAPI should handle multiple namespace.
-    // "DevicesApps.DeviceManagement": "^deviceManagement\\.|^users.deviceEnrollmentConfiguration$|^users.deviceManagementTroubleshootingEvent$|^users.managedDevice$|^users.mobileAppIntentAndState$",
-    // "Workbooks": "^workbooks\\.", - Too large
+     // Fails to build.
+     // "CloudCommunications": "^communications\\.", \\ OData.OpenAPI should handle multiple namespace.
+     // "DevicesApps.DeviceManagement": "^deviceManagement\\.|^users.deviceEnrollmentConfiguration$|^users.deviceManagementTroubleshootingEvent$|^users.managedDevice$|^users.mobileAppIntentAndState$",
+     // "Workbooks": "^workbooks\\.", - Too large
 
-    // Invalid / No longer supported
-    // "Sites.ListItem": "^sites.baseItem$",
-    // "OnlineMeetings": "^app\\.",
+     // Invalid / No longer supported
+     // "Sites.ListItem": "^sites.baseItem$",
+     // "OnlineMeetings": "^app\\.",
 }
